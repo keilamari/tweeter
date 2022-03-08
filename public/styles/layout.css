@@ -24,3 +24,11 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ main {
+   display: flex;
+   width: 90%;
+   align-items: center;
+   justify-content: content;
+   margin: 0 auto;
+ }
