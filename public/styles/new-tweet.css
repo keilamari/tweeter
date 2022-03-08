@@ -33,3 +33,8 @@ button {
 .counter {
   font-family: 'Bungee', sans-serif;
 }
+
+.counter-under {
+  font-family: 'Bungee', sans-serif;
+  color: red;
+}
