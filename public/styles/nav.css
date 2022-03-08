@@ -8,6 +8,7 @@ nav {
   font-family: 'Bungee', sans-serif;
   background-color: #4056A1;
   color: #FFFFFF;
+  position: relative;
 }
 
 .write-tweet {
