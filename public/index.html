@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet-layout.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -28,11 +29,13 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
-      <span class="write-tweet">Write a Tweet
-        <i class="fa-solid fa-angles-down"></i></span>
+      <span class="write-tweet">
+        Write a Tweet
+        <i class="fa-solid fa-angles-down"></i>
+      </span>
     </nav>
 
-    <header>
+    <header class="heading"> 
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
@@ -40,18 +43,36 @@
       <div>
           <h2><strong>First</strong> Name</h2>
       </div>
-  </header>
+    </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="container"><section class="new-tweet">
-      <form method="POST" action='/tweets'>
-        <label for="tweet-text"></label>
-        <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-        <footer>
-          <button type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
-        </footer>
-      </form>
-    </section></main>
+    <main class="container">
+      <section class="new-tweet">
+        <form method="POST" action='/tweets'>
+          <label for="tweet-text"></label>
+          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+          <footer>
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </footer>
+        </form>
+      </section>
+      <section class="tweets">
+        <article>
+          <header>
+            <div>
+              <img src='https://i.imgur.com/73hZDYK.png'> &nbsp;
+              Newton
+            </div>
+            <div>@SirIsaac</div>
+          </header>
+          <p>If I have seen further it is by standing on the shoulders of giants</p>
+          <footer>
+            <div>1646522016188</div> 
+            <div><i id='flag' class="fa-solid fa-flag"></i>  <i id='retweet' class="fa-solid fa-retweet"></i>  <i id='heart' class="fa-solid fa-heart"></i></div>
+          </footer>
+        </article>
+      </section>
+    </main>
   </body>
 </html>
