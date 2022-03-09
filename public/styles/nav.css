@@ -1,4 +1,4 @@
-/* Mobile Styles */
+/* Mobile & Tablet Styles */
 
 nav {
   display: flex;
@@ -29,18 +29,6 @@ nav {
 .fa-angle-double-down:before, .fa-angles-down:before {
   content: "\f103";
   color: red;
-}
-
-/* Tablet Styles */
-@media only screen and (min-width: 768px) {
-  nav {
-    background-color: #4056A1;
-    background-image: none;
-  }
-  .write-tweet {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 2rem;
-  }
 }
 
 /* Desktop styles */

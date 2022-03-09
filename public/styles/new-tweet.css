@@ -1,4 +1,4 @@
-/* Mobile Styles */
+/* Mobile & Tablet Styles */
 
 .new-tweet {
   width: 100%; 
@@ -47,35 +47,17 @@ button {
   color: red;
 }
 
-/* Tablet Styles */
-@media only screen and (min-width: 768px) { 
-  .new-tweet {
-    width: 100%; 
-    padding-top: 10em;
-  }
-  textarea {
-    padding-top: 0;
-  }
-  #error1 {
-    padding: 0.5em;
-    border: solid;
-    color: red;
-    margin-top: 0;
-  }
-  #error2 {
-    padding: 0.5em;
-    border: solid;
-    color: red;
-    margin-top: 0;
-  }
-}
-
 /* Desktop styles */
 @media only screen and (min-width: 1024px) {
   .new-tweet {
     width: 100%; 
     padding-top: 10em;
   }
+
+  textarea {
+    padding-top: 0;
+  }
+
   #error1 {
     padding: 0.5em;
     border: solid;
