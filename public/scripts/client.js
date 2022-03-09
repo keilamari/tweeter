@@ -66,21 +66,23 @@ $(() => {
   $form.on('submit', function(event) {
     event.preventDefault();
     const serializedData = $(event.target).serialize();
-    if (serializedData.substring(5) === "" || serializedData.substring(5) === null) {
+    let input = $('#tweet-text')[0].value
+    if (input === "" || input === null) {
       document.getElementById('error1').hidden = false;
       document.getElementById('error2').hidden = true;
-    } else if (serializedData.length > 145) {
+    } else if (input.length >140) {
       document.getElementById('error2').hidden = false;
       document.getElementById('error1').hidden = true;
     } else {
       $.post('/tweets', serializedData, (response) => {
         loadTweets();
+        //both error messages are hidden
         document.getElementById('error1').hidden = true;
         document.getElementById('error2').hidden = true;
-        //reset text area upon successful post
+        // reset counter to 140
+        document.getElementsByClassName('counter')[0].value = 140;
+        //reset text box to show placeholder
         document.getElementById('tweet-text').value = '';
-        //reset counter to 140 upon successful post
-        document.getElementsByClassName('counter')[0].innerText = 140;
       });
     }
   });
