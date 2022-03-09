@@ -7,6 +7,13 @@
 
 $(() => {
   
+  //to prevent cross-site scripting
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   const loadTweets = () => {
     $.ajax({
       url:'/tweets',
@@ -39,14 +46,14 @@ $(() => {
     <article class="tweet">
       <header>
         <div>
-          <img src='${data.user.avatars}'> &nbsp;
-          ${data.user.name}
+          <img src='${escape(data.user.avatars)}'> &nbsp;
+          ${escape(data.user.name)}
         </div>
-        <div>${data.user.handle}</div>
+        <div>${escape(data.user.handle)}</div>
       </header>
-      <p>${data.content.text}</p>
+      <p>${escape(data.content.text)}</p>
       <footer>
-        <div>${timeago.format(data.created_at)}</div> 
+        <div>${escape(timeago.format(data.created_at))}</div> 
         <div><i id='flag' class="fa-solid fa-flag"></i>  <i id='retweet' class="fa-solid fa-retweet"></i>  <i id='heart' class="fa-solid fa-heart"></i></div>
       </footer>
     </article>`);
