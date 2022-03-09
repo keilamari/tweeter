@@ -1,3 +1,5 @@
+/* Mobile Styles */
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -6,7 +8,8 @@ nav {
   padding-left: 1.5em;
   padding-right: 1.5em;
   font-family: 'Bungee', sans-serif;
-  background-color: #4056A1;
+  background-color: #8a005e;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
   color: #FFFFFF;
   position: fixed;
   top: 0;
@@ -16,14 +19,38 @@ nav {
 
 .write-tweet {
   font-family: 'Source Sans Pro', sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.write-tweet p {
+  text-align: center;
 }
 
 .fa-angle-double-down:before, .fa-angles-down:before {
   content: "\f103";
   color: red;
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 768px) {
+  nav {
+    background-color: #4056A1;
+    background-image: none;
+  }
+  .write-tweet {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2rem;
+  }
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  nav {
+    background-color: #4056A1;
+    background-image: none;
+  }
+  .write-tweet {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2rem;
+  }
 }

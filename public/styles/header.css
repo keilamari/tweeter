@@ -1,3 +1,5 @@
+/* Mobile Styles */
+
 .heading {
   display: flex;
   align-items: center;
@@ -7,4 +9,55 @@
   background-color: #8a005e;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
   padding-top: 120px;
+}
+
+.heading div {
+  font-size: 2em;
+  padding-bottom: 0.5em;
+}
+
+/* Tablet style */
+@media only screen and (min-width: 768px) {
+  .heading  {
+    height:15em;
+    width: 10em;
+    margin-top: 10em;
+    margin-left: 2em;
+    padding: 0;
+  }
+  .heading div {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .heading div p {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    font-size: 0.5em;
+  }
+}
+
+/* Desktop Style  */
+@media only screen and (min-width: 1024px) {
+  .heading  {
+    height:15em;
+    width: 15em;
+    margin-top: 10em;
+    margin-left: 2em;
+    padding: 0;
+  }
+  .heading div {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .heading div p {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    font-size: 1em;
+  }
 }
