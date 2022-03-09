@@ -1,32 +1,31 @@
-.tweets  {
-  margin: 1em;
+#tweets-container  {
   width: 100%;
-  border: solid;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
-.tweets:hover {
+article:hover {
   box-shadow: 0.5em 0.5em #4056A1;
 }
 
 article {
-  width: 98%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  width: 100%;
+  border: solid;
+  display: flex;
+  flex-direction: column;
 }
 
 article p {
-  border-bottom: solid;
-  width: 100%;
   padding: 0.5em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  border-bottom: solid;
 }
 
 article header {
   display: flex;
   justify-content: space-between;
   margin: 0.5em;
-  align-items: center;
 }
 
 article header div {
