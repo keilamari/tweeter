@@ -16,3 +16,10 @@ Tweeter is a simple, single-page Twitter clone built with HTML, CSS, JS, jQuery 
 - Chance
 - md5
 - timeago.js
+
+## Screenshots
+
+!["Screenshot of desktop view"](https://github.com/keilamari/tweeter/blob/master/docs/desktop-view.png?raw=true)
+!["Screenshot of mobile view"](https://github.com/keilamari/tweeter/blob/master/docs/mobile-view.png?raw=true)
+!["Screenshot of error message 1"](https://github.com/keilamari/tweeter/blob/master/docs/error1.png?raw=true)
+!["Screenshot of error message 2"](https://github.com/keilamari/tweeter/blob/master/docs/error2.png?raw=true)
