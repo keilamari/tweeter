@@ -50,6 +50,8 @@
     <main class="container">
       <section class="new-tweet">
         <form method="POST" action='/tweets'>
+          <p hidden id="error1">You have to write something to tweet!</p>
+          <p hidden id="error2">You have written too much!</p>
           <label for="tweet-text"></label>
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <footer>

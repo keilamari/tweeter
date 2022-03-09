@@ -66,9 +66,11 @@ $(() => {
     event.preventDefault();
     const serializedData = $(event.target).serialize();
     if(serializedData.substring(5) === "" || serializedData.substring(5) === null) {
-      alert('You have to write something to tweet!')
+      document.getElementById('error1').hidden = false;
+      document.getElementById('error2').hidden = true;
     } else if (serializedData.length > 145) {
-      alert('You have written too much!')
+      document.getElementById('error2').hidden = false;
+      document.getElementById('error1').hidden = true;
     } else{
       $.post('/tweets', serializedData, (response) => {
         loadTweets();
@@ -79,5 +81,4 @@ $(() => {
       })  
     }
   })
-  
-  });
+});

@@ -38,3 +38,15 @@ button {
   font-family: 'Bungee', sans-serif;
   color: red;
 }
+
+#error1 {
+  padding: 0.5em;
+  border: solid;
+  color: red;
+}
+
+#error2 {
+  padding: 0.5em;
+  border: solid;
+  color: red;
+}
