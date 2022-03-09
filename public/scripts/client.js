@@ -58,6 +58,11 @@ $(() => {
   $form.on('submit', function(event){
     event.preventDefault();
     const serializedData = $(event.target).serialize();
+    if(serializedData.substring(5) === "" || serializedData.substring(5) === null) {
+      alert('You have to write something to tweet!')
+    } else if (serializedData.length > 145) {
+      alert('You have written too much!')
+    } else{
       $.post('/tweets', serializedData, (response) => {
         loadTweets();
         //reset text area upon successful post
@@ -65,6 +70,7 @@ $(() => {
         //reset counter to 140 upon successful post
         document.getElementsByClassName('counter')[0].innerText = 140;
       })  
+    }
   })
   
   });
