@@ -46,7 +46,7 @@ $(() => {
       </header>
       <p>${data.content.text}</p>
       <footer>
-        <div>${data.created_at}</div> 
+        <div>${timeago.format(data.created_at)}</div> 
         <div><i id='flag' class="fa-solid fa-flag"></i>  <i id='retweet' class="fa-solid fa-retweet"></i>  <i id='heart' class="fa-solid fa-heart"></i></div>
       </footer>
     </article>`);
